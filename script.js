@@ -8,7 +8,7 @@ const mensagem = document.querySelector(".mensagem");
 // A letra "o" é convertida para "ober"
 // A letra "u" é convertida para "ufat"
 
-function btnCripto(){
+function btnCripto() {
     const textCripto = criptografar(textArea.value);
     mensagem.value = textCripto; // exibir na tela
     textArea.value = ""; // limpeza
@@ -17,24 +17,22 @@ function btnCripto(){
 
 function criptografar(stringCripto) {
 
-    let matrizCodigo = [["e", "enter"], ["i","imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+
     stringCripto = stringCripto; // precisa garantir que seja tudo minusculo e sem acentuação
 
     //console.table(stringCripto);
 
-    for(let x = 0; x < matrizCodigo.length; x++){
+    for (let x = 0; x < matrizCodigo.length; x++) {
 
-        if(stringCripto.includes(matrizCodigo[x][0])) {
-            console.table((matrizCodigo[x][0]));
+        if (stringCripto.includes(matrizCodigo[x][0])) {
             stringCripto = stringCripto.replaceAll(matrizCodigo[x][0], matrizCodigo[x][1]);
         }
-   
     }
     return stringCripto;
 }
 
-function btnDesenCripto(){
+function btnDesenCripto() {
     const textDesenCripto = Desencriptografar(textArea.value);
     mensagem.value = textDesenCripto; // exibir na tela
     textArea.value = ""; // limpeza
@@ -42,25 +40,22 @@ function btnDesenCripto(){
 
 function Desencriptografar(stringDesencripto) {
 
-    let matrizCodigo = [["e", "enter"], ["i","imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    
-    stringDesencripto = stringDesencripto; 
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
-    for(let x = 0; x < matrizCodigo.length; x++){
+    stringDesencripto = stringDesencripto;
 
-        if(stringDesencripto.includes(matrizCodigo[x][1])) {
-            //console.table((matrizCodigo[x][1]));
+    for (let x = 0; x < matrizCodigo.length; x++) {
+
+        if (stringDesencripto.includes(matrizCodigo[x][1])) {
             stringDesencripto = stringDesencripto.replaceAll(matrizCodigo[x][1], matrizCodigo[x][0]);
         }
-   
     }
     return stringDesencripto;
 }
 
-function btnCopiar(){
+function btnCopiar() {
     const textMensagem = mensagem.value;
 
     textArea.value = textMensagem;
     mensagem.value = ""; // limpeza
-
 }
