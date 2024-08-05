@@ -19,7 +19,7 @@ function criptografar(stringCripto) {
 
     let matrizCodigo = [["e", "enter"], ["i","imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     
-    stringCripto = stringCripto; // precisa garantir que seja tudo minusculo
+    stringCripto = stringCripto; // precisa garantir que seja tudo minusculo e sem acentuação
 
     //console.table(stringCripto);
 
@@ -31,9 +31,32 @@ function criptografar(stringCripto) {
         }
    
     }
-
     return stringCripto;
 }
 
+function btnDesenCripto(){
+    const textDesenCripto = Desencriptografar(textArea.value);
+    mensagem.value = textDesenCripto; // exibir na tela
+    textArea.value = ""; // limpeza
+}
 
+function Desencriptografar(stringDesencripto) {
 
+    let matrizCodigo = [["e", "enter"], ["i","imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    
+    stringDesencripto = stringDesencripto; 
+
+    for(let x = 0; x < matrizCodigo.length; x++){
+
+        if(stringDesencripto.includes(matrizCodigo[x][1])) {
+            //console.table((matrizCodigo[x][1]));
+            stringDesencripto = stringDesencripto.replaceAll(matrizCodigo[x][1], matrizCodigo[x][0]);
+        }
+   
+    }
+    return stringDesencripto;
+}
+
+function btnCopiar(){
+    
+}
