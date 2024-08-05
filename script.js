@@ -8,6 +8,8 @@ const mensagem = document.querySelector(".mensagem");
 // A letra "o" é convertida para "ober"
 // A letra "u" é convertida para "ufat"
 
+let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+
 function btnCripto() {
     const textCripto = criptografar(textArea.value);
     mensagem.value = textCripto; // exibir na tela
@@ -16,11 +18,6 @@ function btnCripto() {
 
 
 function criptografar(stringCripto) {
-
-    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-
-    stringCripto = stringCripto; // precisa garantir que seja tudo minusculo e sem acentuação
-
     //console.table(stringCripto);
 
     for (let x = 0; x < matrizCodigo.length; x++) {
@@ -39,10 +36,6 @@ function btnDesenCripto() {
 }
 
 function Desencriptografar(stringDesencripto) {
-
-    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-
-    stringDesencripto = stringDesencripto;
 
     for (let x = 0; x < matrizCodigo.length; x++) {
 
