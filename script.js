@@ -1,7 +1,6 @@
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
-
-
+const imagem = document.getElementById("bonecoAlura");
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -12,11 +11,9 @@ const mensagem = document.querySelector(".mensagem");
 
 let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
-let imagem = document.getElementById(".text-area");
+function exibirMensagemNaTela(tag, texto) {
 
-function exibirMensagemNaTela(tag, texto){
-
-    let informacao = document.querySelector(tag);   
+    let informacao = document.querySelector(tag);
     informacao.innerHTML = texto;
 }
 
@@ -24,21 +21,21 @@ function exibirMensagemNaTela(tag, texto){
 function btnCripto() {
     const textCripto = criptografar(textArea.value);
 
-    if (textCripto==""){
+    if (textCripto == "") {
 
-        exibirMensagemNaTela('h2','Nenhuma mensagem encontrada!');
-        exibirMensagemNaTela('h3','Digite um texto que você deseja criptografar ou descriptografar.');
-        mensagem.value="";
+        exibirMensagemNaTela('h2', 'Nenhuma mensagem encontrada!');
+        exibirMensagemNaTela('h3', 'Digite um texto que você deseja criptografar ou descriptografar.');
+        mensagem.value = "";
+        imagem.style.visibility = "visible";
     }
-
-    if (textCripto!=""){
+    else {
         mensagem.value = textCripto; // exibir na tela
         textArea.value = ""; // limpeza
-        
+
         exibirMensagemNaTela('h2', '');
         exibirMensagemNaTela('h3', '');
-        /*imagem.src*/
-    }   
+        imagem.style.visibility = "hidden";
+    }
 }
 
 
@@ -57,11 +54,15 @@ function criptografar(stringCripto) {
 function btnDesenCripto() {
     const textDesenCripto = Desencriptografar(textArea.value);
 
-    if (textDesenCripto==""){
+    if (textDesenCripto == "") {
 
-        exibirMensagemNaTela('h2','Nenhuma mensagem encontrada!');
-        exibirMensagemNaTela('h3','Digite um texto que você deseja criptografar ou descriptografar.');
-        mensagem.value="";
+        exibirMensagemNaTela('h2', 'Nenhuma mensagem encontrada!');
+        exibirMensagemNaTela('h3', 'Digite um texto que você deseja criptografar ou descriptografar.');
+        mensagem.value = "";
+        imagem.style.visibility = "visible";
+    }
+    else { 
+        imagem.style.visibility = "hidden"; 
     }
 
     mensagem.value = textDesenCripto; // exibir na tela
@@ -80,8 +81,10 @@ function Desencriptografar(stringDesencripto) {
 }
 
 function btnCopiar() {
+    /*o botão copiar só deve aparecer depois da criptografia*/
     const textMensagem = mensagem.value;
 
     textArea.value = textMensagem;
     mensagem.value = ""; // limpeza
+    imagem.style.visibility = "visible";
 }

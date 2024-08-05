@@ -21,7 +21,6 @@ main{
     background-image: url("./imagens/bonecoAlura.png");
     background-repeat: no-repeat;
     justify-content: space-between;
-    /*flex-direction: row;*/
     width: 335px;
     height: 304px;
     border: none; 
@@ -45,16 +44,11 @@ main{
     }
 
 .mensagem{
-    /*background: white;*/
-    /*background-image: url(/imagens/bonecoAlura.png);*/
-    /*background-repeat: no-repeat;*/
     border: none; 
     border-radius: 24px;
     color: #0A3871;
     margin-left: 98px;
     margin-top: 10px;
-    /*padding-left: 20px;*/
-    /*position: fixed;        */
     width: 330px;
     height: 50px;
 }
@@ -64,27 +58,23 @@ main{
 }
 
 .caixa__mensagem__l1{
-    /*background-color: white;*/
     font-family: "Inter", sans-serif;
     font-size: 24px;
     font-weight: 700;
     width: 336px;
     height: 58px;
     margin-top: 10px;
-    /*margin-left: 98px;*/
     text-align: center;
     position: relative;
  
  }
 
 .caixa__mensagem__l2{
-    /*background-color: white;*/
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-style: normal;
     width: 336px;
     height: 48px;
-    /*margin-left: 98px;*/
     text-align: center;
     position: relative;
 
