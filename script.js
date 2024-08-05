@@ -58,5 +58,9 @@ function Desencriptografar(stringDesencripto) {
 }
 
 function btnCopiar(){
-    
+    const textMensagem = mensagem.value;
+
+    textArea.value = textMensagem;
+    mensagem.value = ""; // limpeza
+
 }
