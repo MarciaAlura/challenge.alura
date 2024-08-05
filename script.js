@@ -1,6 +1,8 @@
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
 
+
+
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
 // A letra "i" é convertida para "imes"
@@ -9,6 +11,8 @@ const mensagem = document.querySelector(".mensagem");
 // A letra "u" é convertida para "ufat"
 
 let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+
+let imagem = document.getElementById(".text-area");
 
 function exibirMensagemNaTela(tag, texto){
 
@@ -20,12 +24,20 @@ function exibirMensagemNaTela(tag, texto){
 function btnCripto() {
     const textCripto = criptografar(textArea.value);
 
+    if (textCripto==""){
+
+        exibirMensagemNaTela('h2','Nenhuma mensagem encontrada!');
+        exibirMensagemNaTela('h3','Digite um texto que você deseja criptografar ou descriptografar.');
+        mensagem.value="";
+    }
+
     if (textCripto!=""){
         mensagem.value = textCripto; // exibir na tela
         textArea.value = ""; // limpeza
-
+        
         exibirMensagemNaTela('h2', '');
         exibirMensagemNaTela('h3', '');
+        /*imagem.src*/
     }   
 }
 
@@ -44,6 +56,14 @@ function criptografar(stringCripto) {
 
 function btnDesenCripto() {
     const textDesenCripto = Desencriptografar(textArea.value);
+
+    if (textDesenCripto==""){
+
+        exibirMensagemNaTela('h2','Nenhuma mensagem encontrada!');
+        exibirMensagemNaTela('h3','Digite um texto que você deseja criptografar ou descriptografar.');
+        mensagem.value="";
+    }
+
     mensagem.value = textDesenCripto; // exibir na tela
     textArea.value = ""; // limpeza
 }

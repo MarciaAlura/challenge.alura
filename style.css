@@ -5,7 +5,7 @@
     font-size: 32px;
     line-height: 150%;
 }
-    
+
 .logoAlura{
 
     margin-left: 10px;
@@ -15,8 +15,21 @@
 
 main{
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 98px;
+    background-image: url("./imagens/bonecoAlura.png");
+    background-repeat: no-repeat;
+    justify-content: space-between;
+    /*flex-direction: row;*/
+    width: 335px;
+    height: 304px;
+    border: none; 
+    border-radius: 24px;
+    color: #0A3871;
+    padding-left: 20px;
+    position: fixed;
+    
 }
 
 .text-area{
@@ -24,7 +37,6 @@ main{
     color: #0A3871;
     margin-top: 90px;
     text-transform: lowercase;
-
 }
 
 ::placeholder{color: #0A3871; }
@@ -34,17 +46,17 @@ main{
 
 .mensagem{
     /*background: white;*/
-    background-image: url(/imagens/bonecoAlura.png);
-    background-repeat: no-repeat;
+    /*background-image: url(/imagens/bonecoAlura.png);*/
+    /*background-repeat: no-repeat;*/
     border: none; 
     border-radius: 24px;
     color: #0A3871;
     margin-left: 98px;
-    margin-top: 50px;
-    padding-left: 20px;
-    position: fixed;
-    width: 335px;
-    height: 304px;
+    margin-top: 10px;
+    /*padding-left: 20px;*/
+    /*position: fixed;        */
+    width: 330px;
+    height: 50px;
 }
 
 .mensagem:focus{
@@ -58,9 +70,10 @@ main{
     font-weight: 700;
     width: 336px;
     height: 58px;
-    margin-top: 390px;
-    margin-left: 98px;
+    margin-top: 10px;
+    /*margin-left: 98px;*/
     text-align: center;
+    position: relative;
  
  }
 
@@ -71,8 +84,9 @@ main{
     font-style: normal;
     width: 336px;
     height: 48px;
-    margin-left: 98px;
+    /*margin-left: 98px;*/
     text-align: center;
+    position: relative;
 
 }
 
@@ -115,9 +129,9 @@ main{
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 98px;
-    /*margin-top: 482px;*/
-    position: absolute;
+    /*margin-left: 98px;*/
+    margin-top: 10px;
+    position: relative;
     width: 336px;
 }
 
