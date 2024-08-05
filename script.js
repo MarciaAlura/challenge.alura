@@ -10,10 +10,23 @@ const mensagem = document.querySelector(".mensagem");
 
 let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
+function exibirMensagemNaTela(tag, texto){
+
+    let informacao = document.querySelector(tag);   
+    informacao.innerHTML = texto;
+}
+
+
 function btnCripto() {
     const textCripto = criptografar(textArea.value);
-    mensagem.value = textCripto; // exibir na tela
-    textArea.value = ""; // limpeza
+
+    if (textCripto!=""){
+        mensagem.value = textCripto; // exibir na tela
+        textArea.value = ""; // limpeza
+
+        exibirMensagemNaTela('h2', '');
+        exibirMensagemNaTela('h3', '');
+    }   
 }
 
 

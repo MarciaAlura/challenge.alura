@@ -33,24 +33,53 @@ main{
     }
 
 .mensagem{
-    background: white;
+    /*background: white;*/
     background-image: url(/imagens/bonecoAlura.png);
     background-repeat: no-repeat;
     border: none; 
     border-radius: 24px;
     color: #0A3871;
     margin-left: 98px;
-    margin-top: 20px;
+    margin-top: 50px;
     padding-left: 20px;
     position: fixed;
+    width: 335px;
+    height: 304px;
 }
+
 .mensagem:focus{
     outline: none;
+}
+
+.caixa__mensagem__l1{
+    /*background-color: white;*/
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    width: 336px;
+    height: 58px;
+    margin-top: 390px;
+    margin-left: 98px;
+    text-align: center;
+ 
+ }
+
+.caixa__mensagem__l2{
+    /*background-color: white;*/
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    width: 336px;
+    height: 48px;
+    margin-left: 98px;
+    text-align: center;
+
 }
 
 .informacao{
     color: #495057;
     font-size: 12px;
+    
 }
     
 .botoes{
@@ -86,8 +115,8 @@ main{
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 108px;
-    margin-top: 482px;
+    margin-left: 98px;
+    /*margin-top: 482px;*/
     position: absolute;
     width: 336px;
 }
