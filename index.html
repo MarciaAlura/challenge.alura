@@ -21,11 +21,15 @@
     <main>
         <section>
 
-            <div>
+            <div class="tela__topo">
                 <img class="bonecoAlura" id="bonecoAlura" src="./imagens/bonecoAlura.png" alt="">
+                <textarea class="mensagem" cols="20" rows="10"></textarea>
             </div>
 
-            <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+            <div>
+                <textarea class="text-area" cols="20" rows="3" placeholder="Digite seu texto"></textarea>
+            </div>
+
 
             <div class="informacao">
                 <h6>Apenas letras minúsculas e sem acento.</h6>
@@ -45,16 +49,13 @@
                         </h3>
                     </div>
                     <div>
-                        <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+                        <button class="btn-copiar" id="btn-copiar" onclick="btnCopiar()">Copiar</button>
                     </div>
                 </section>
             </div>
 
         </section>
 
-        <section>
-            <textarea class="mensagem" cols="20" rows="10"></textarea>
-        </section>
 
     </main>
     <script src="script.js"></script>

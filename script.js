@@ -1,6 +1,7 @@
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
 const imagem = document.getElementById("bonecoAlura");
+const botaoCopiar = document.getElementById("btn-copiar");
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -11,12 +12,13 @@ const imagem = document.getElementById("bonecoAlura");
 
 let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
+botaoCopiar.style.visibility = "hidden";
+
 function exibirMensagemNaTela(tag, texto) {
 
     let informacao = document.querySelector(tag);
     informacao.innerHTML = texto;
 }
-
 
 function btnCripto() {
     const textCripto = criptografar(textArea.value);
@@ -27,6 +29,7 @@ function btnCripto() {
         exibirMensagemNaTela('h3', 'Digite um texto que você deseja criptografar ou descriptografar.');
         mensagem.value = "";
         imagem.style.visibility = "visible";
+        botaoCopiar.style.visibility = "hidden";
     }
     else {
         mensagem.value = textCripto; // exibir na tela
@@ -35,6 +38,7 @@ function btnCripto() {
         exibirMensagemNaTela('h2', '');
         exibirMensagemNaTela('h3', '');
         imagem.style.visibility = "hidden";
+        botaoCopiar.style.visibility = "visible";
     }
 }
 
@@ -60,9 +64,11 @@ function btnDesenCripto() {
         exibirMensagemNaTela('h3', 'Digite um texto que você deseja criptografar ou descriptografar.');
         mensagem.value = "";
         imagem.style.visibility = "visible";
+        botaoCopiar.style.visibility = "hidden";
     }
-    else { 
-        imagem.style.visibility = "hidden"; 
+    else {
+        imagem.style.visibility = "hidden";
+        botaoCopiar.style.visibility = "visible";
     }
 
     mensagem.value = textDesenCripto; // exibir na tela
@@ -87,4 +93,5 @@ function btnCopiar() {
     textArea.value = textMensagem;
     mensagem.value = ""; // limpeza
     imagem.style.visibility = "visible";
+    botaoCopiar.style.visibility = "hidden";
 }

@@ -1,40 +1,38 @@
-*{
-    background:  #E5E5E5;
+* {
+    background: #E5E5E5;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
 }
 
-.logoAlura{
+.logoAlura {
 
     margin-left: 10px;
     padding-top: 10px;
     width: 2%;
 }
 
-.bonecoAlura{
-    margin-left: 50%;
+.bonecoAlura {
+    margin-left: 80%;
 }
 
-main{
+main {
     display: flex;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 5%;
-    /*background-image: url("./imagens/bonecoAlura.png");*/
     background-repeat: no-repeat;
     justify-content: left;
     width: 335px;
     height: 304px;
-    border: none; 
+    border: none;
     border-radius: 24px;
     color: #0A3871;
     padding-left: 5%;
-    /*position: fixed;   */
 }
 
-.text-area{
+.text-area {
     border: none;
     color: #0A3871;
     margin-top: 5%;
@@ -42,26 +40,35 @@ main{
     position: relative;
 }
 
-::placeholder{color: #0A3871; }
-    .text-area:focus{
-        outline: none;
-    }
+::placeholder {
+    color: #0A3871;
+}
 
-.mensagem{
-    border: none; 
+.text-area:focus {
+    outline: none;
+}
+
+.mensagem {
+    display: flex;
+    border: none;
     border-radius: 24px;
     color: #0A3871;
-    margin-left: 25%;
+    margin-left: 80%;
     margin-top: 5%;
     width: 330px;
     height: 50px;
 }
 
-.mensagem:focus{
+.mensagem:focus {
     outline: none;
 }
 
-.caixa__mensagem__l1{
+.tela__topo {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.caixa__mensagem__l1 {
     font-family: "Inter", sans-serif;
     font-size: 24px;
     font-weight: 700;
@@ -71,10 +78,10 @@ main{
     text-align: center;
     position: relative;
     margin-left: 25%;
- 
- }
 
-.caixa__mensagem__l2{
+}
+
+.caixa__mensagem__l2 {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -86,19 +93,19 @@ main{
 
 }
 
-.informacao{
+.informacao {
     color: #495057;
     font-size: 12px;
-    
+
 }
-    
-.botoes{
+
+.botoes {
     display: flex;
     margin-top: 18px;
     justify-content: space-between;
 }
 
-.btn-encripta{
+.btn-encripta {
     background-color: #0A3871;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -109,7 +116,7 @@ main{
 
 }
 
-.btn-desenencripta{
+.btn-desenencripta {
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -120,7 +127,7 @@ main{
     width: 328px;
 }
 
-.btn-copiar{
+.btn-copiar {
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
@@ -133,52 +140,52 @@ main{
 }
 
 /*CSS media query dentro de um stylesheet*/
-@media (max-width: 1000px) {
- 
-    main{
+@media (max-width: 1250px) {
+
+    main {
         width: auto;
     }
 
-    .text-area{
+    .text-area {
         width: auto;
     }
 
-    .informacao{
-        width: auto;
-        flex-direction: column;
-    }
-
-    .mensagem{
+    .informacao {
         width: auto;
         flex-direction: column;
     }
 
-    .botoes{
+    .mensagem {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .botoes {
         width: auto;
         flex-direction: column;
         justify-content: center;
         margin-left: 0%;
     }
 
-    .btn-encripta{
+    .btn-encripta {
         justify-content: space-between;
         position: relative;
         margin-left: 25%;
     }
 
-    .btn-desenencripta{
+    .btn-desenencripta {
         justify-content: space-between;
         position: relative;
         margin-left: 25%;
     }
 
-    .caixa__mensagem__l2{
+    .caixa__mensagem__l2 {
         width: auto;
-        flex-direction: column;  
-        margin-left: 0%;      
+        flex-direction: column;
+        margin-left: 0%;
     }
 
-    .caixa__mensagem__l1{
+    .caixa__mensagem__l1 {
         width: auto;
         flex-direction: column;
         margin-left: 0%;
