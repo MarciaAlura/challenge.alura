@@ -20,6 +20,11 @@
 
     <main>
         <section>
+
+            <div>
+                <img class="bonecoAlura" id="bonecoAlura" src="./imagens/bonecoAlura.png" alt="">
+            </div>
+
             <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
 
             <div class="informacao">
@@ -29,22 +34,28 @@
             <div class="botoes">
                 <button class="btn-encripta" onclick="btnCripto()">Criptografar</button>
                 <button class="btn-desenencripta" onclick="btnDesenCripto()">Descriptografar</button>
+
+                <section>
+                    <div class="caixa__mensagem">
+                        <h2 class="caixa__mensagem__l1"></h2>
+                    </div>
+
+                    <div>
+                        <h3 class="caixa__mensagem__l2">Digite um texto que você deseja criptografar ou descriptografar.
+                        </h3>
+                    </div>
+                    <div>
+                        <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+                    </div>
+                </section>
             </div>
+
         </section>
 
         <section>
-            <img class="bonecoAlura" id="bonecoAlura" src="./imagens/bonecoAlura.png" alt="">
             <textarea class="mensagem" cols="20" rows="10"></textarea>
-            <div class="caixa__mensagem">
-                <h2 class="caixa__mensagem__l1"></h2>
-            </div>
-            <div>
-                <h3 class="caixa__mensagem__l2">Digite um texto que você deseja criptografar ou descriptografar.</h2>
-            </div>
-            <div>
-                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
-            </div>
         </section>
+
     </main>
     <script src="script.js"></script>
 </body>
